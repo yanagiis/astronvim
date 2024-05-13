@@ -18,6 +18,7 @@ return {
   { import = "astrocommunity.pack.sql" },
   { import = "astrocommunity.pack.svelte" },
   { import = "astrocommunity.pack.toml" },
+  { import = "astrocommunity.pack.typescript" },
   { import = "astrocommunity.pack.yaml" },
   { import = "astrocommunity.pack.zig" },
   { import = "astrocommunity.editing-support.neogen" },

@@ -21,6 +21,7 @@ return {
   { import = "astrocommunity.pack.yaml" },
   { import = "astrocommunity.pack.zig" },
   { import = "astrocommunity.editing-support.neogen" },
+  { import = "astrocommunity.editing-support.chatgpt-nvim" },
   { import = "astrocommunity.git.octo-nvim" },
   { import = "astrocommunity.git.blame-nvim" },
   { import = "astrocommunity.utility.telescope-fzy-native-nvim" },

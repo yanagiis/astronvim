@@ -44,6 +44,10 @@ return {
       -- first key is the mode
       n = {
         -- second key is the lefthand side of the map
+        ["<leader>ka"] = { "<cmd>ChatGPTRun code_readability_analysis<CR>", desc = "Code Readability Analysis" },
+        ["<leader>kd"] = { "<cmd>ChatGPTRun docstring<CR>", desc = "docstring"},
+        ["<leader>kg"] = { "<cmd>ChatGPTRun grammar_correction<CR>", desc = "grammar Correction"},
+        ["<leader>ko"] = { "<cmd>ChatGPTRun optimize_code<CR>", desc = "optimize code"},
         ["<leader>lg"] = { "<cmd>:lua require('neogen').generate()<CR>", desc = "generate comment" },
         ["<leader><space>w"] = { "<cmd>:HopWord<cr>", desc = "Hop any word" },
         ["<leader><space>b"] = { "<cmd>:HopWord<cr>", desc = "Hop any word" },

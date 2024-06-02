@@ -36,5 +36,11 @@ return {
       { "<c-s>", mode = { "c" }, function() require("flash").toggle() end, desc = "Toggle Flash Search" },
     },
   },
+  {
+    import = "astrocommunity.completion.copilot-lua",
+    cmd = "Copilot",
+    event = "InsertEnter",
+    config = function() require("copilot").setup {} end,
+  },
   -- import/override with your plugins folder
 }

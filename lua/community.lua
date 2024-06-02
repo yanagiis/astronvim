@@ -36,6 +36,7 @@ return {
       { "<c-s>", mode = { "c" }, function() require("flash").toggle() end, desc = "Toggle Flash Search" },
     },
   },
+  { import = "astrocommunity.motion.harpoon" },
   {
     import = "astrocommunity.completion.copilot-lua",
     cmd = "Copilot",

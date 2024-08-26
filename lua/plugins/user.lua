@@ -21,4 +21,11 @@ return {
     "ldelossa/nvim-dap-projects",
     config = function() require("nvim-dap-projects").search_project_config() end,
   },
+  {
+    "pogyomo/cppguard.nvim",
+    dependencies = {
+      "L3MON4D3/LuaSnip", -- If you're using luasnip.
+    },
+    lazy = true,
+  },
 }

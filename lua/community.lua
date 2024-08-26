@@ -26,19 +26,14 @@ return {
   { import = "astrocommunity.git.octo-nvim" },
   { import = "astrocommunity.git.blame-nvim" },
   { import = "astrocommunity.utility.telescope-fzy-native-nvim" },
-  {
-    import = "astrocommunity.motion.flash-nvim",
-    keys = {
-      { "s", mode = { "n", "x", "o" }, function() require("flash").jump() end, desc = "Flash" },
-      { "S", mode = { "n", "o", "x" }, function() require("flash").treesitter() end, desc = "Flash Treesitter" },
-      { "r", mode = "o", function() require("flash").remote() end, desc = "Remote Flash" },
-      { "R", mode = { "o", "x" }, function() require("flash").treesitter_search() end, desc = "Treesitter Search" },
-      { "<c-s>", mode = { "c" }, function() require("flash").toggle() end, desc = "Toggle Flash Search" },
-    },
-  },
   { import = "astrocommunity.motion.harpoon" },
   {
+    import = "astrocommunity.motion.hop-nvim",
+    config = function() require("hop").setup {} end,
+  },
+  {
     import = "astrocommunity.completion.copilot-lua",
+    tag = "*",
     cmd = "Copilot",
     event = "InsertEnter",
     config = function() require("copilot").setup {} end,

@@ -44,19 +44,20 @@ return {
       -- first key is the mode
       n = {
         -- second key is the lefthand side of the map
-        ["<leader>ka"] = { "<cmd>ChatGPTRun code_readability_analysis<CR>", desc = "Code Readability Analysis" },
-        ["<leader>kd"] = { "<cmd>ChatGPTRun docstring<CR>", desc = "docstring" },
-        ["<leader>kg"] = { "<cmd>ChatGPTRun grammar_correction<CR>", desc = "grammar Correction" },
-        ["<leader>ko"] = { "<cmd>ChatGPTRun optimize_code<CR>", desc = "optimize code" },
-        ["<leader>lg"] = { "<cmd>:lua require('neogen').generate()<CR>", desc = "generate comment" },
-        ["<leader>hm"] = { function() require("harpoon"):list():add() end, desc = "Add file in harpoon" },
-        ["<leader>hh"] = {
+        ["<Leader>ka"] = { "<cmd>ChatGPTRun code_readability_analysis<CR>", desc = "Code Readability Analysis" },
+        ["<Leader>kd"] = { "<cmd>ChatGPTRun docstring<CR>", desc = "docstring" },
+        ["<Leader>kg"] = { "<cmd>ChatGPTRun grammar_correction<CR>", desc = "grammar Correction" },
+        ["<Leader>ko"] = { "<cmd>ChatGPTRun optimize_code<CR>", desc = "optimize code" },
+        ["<Leader>lg"] = { "<cmd>:lua require('neogen').generate()<CR>", desc = "generate comment" },
+        ["<Leader>hm"] = { function() require("harpoon"):list():add() end, desc = "Add file in harpoon" },
+        ["<Leader>hh"] = {
           function() require("harpoon").ui:toggle_quick_menu(require("harpoon"):list()) end,
           desc = "Open harpoon menu",
         },
-        ["<leader><space>w"] = { "<cmd>:HopWord<cr>", desc = "Hop any word" },
-        ["<leader><space>b"] = { "<cmd>:HopWord<cr>", desc = "Hop any word" },
-        ["<leader><space>c"] = { "<cmd>:HopChar1<cr>", desc = "Hop any char" },
+        ["<Leader><space>w"] = { function() require("hop").hint_words {} end, desc = "Hop words" },
+        ["<Leader><space>b"] = { function() require("hop").hint_words {} end, desc = "Hop words" },
+        ["<Leader><space>l"] = { function() require("hop").hint_lines {} end, desc = "Hop lines" },
+        ["<Leader><space>f"] = { function() require("hop").hint_char1 {} end, desc = "Hop char1" },
         [";"] = { ":" },
       },
       t = {

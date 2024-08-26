@@ -14,10 +14,11 @@ return {
     enabled = false,
   },
   {
-    "phaazon/hop.nvim",
-    branch = "v2",
-    config = function() require("hop").setup {} end,
-    lazy = false,
-    opts = {},
+    "RRethy/vim-illuminate",
+    enabled = false,
+  },
+  {
+    "ldelossa/nvim-dap-projects",
+    config = function() require("nvim-dap-projects").search_project_config() end,
   },
 }

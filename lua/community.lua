@@ -22,7 +22,23 @@ return {
   { import = "astrocommunity.pack.yaml" },
   { import = "astrocommunity.pack.zig" },
   { import = "astrocommunity.editing-support.neogen" },
-  { import = "astrocommunity.editing-support.chatgpt-nvim" },
+  {
+    import = "astrocommunity.editing-support.chatgpt-nvim",
+    config = function()
+      require("chatgpt").setup {
+        -- this config assumes you have OPENAI_API_KEY environment variable set
+        openai_params = {
+          model = "gpt-4o-mini",
+          frequency_penalty = 0,
+          presence_penalty = 0,
+          max_tokens = 16384,
+          temperature = 0.2,
+          top_p = 0.1,
+          n = 1,
+        },
+      }
+    end,
+  },
   { import = "astrocommunity.git.octo-nvim" },
   { import = "astrocommunity.git.blame-nvim" },
   { import = "astrocommunity.utility.telescope-fzy-native-nvim" },

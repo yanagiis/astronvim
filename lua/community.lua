@@ -54,5 +54,8 @@ return {
     event = "InsertEnter",
     config = function() require("copilot").setup {} end,
   },
+  { import = "astrocommunity.debugging.persistent-breakpoints-nvim" },
+  { import = "astrocommunity.debugging.telescope-dap-nvim" },
+  { import = "astrocommunity.utility.lua-json5" },
   -- import/override with your plugins folder
 }

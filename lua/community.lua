@@ -25,17 +25,19 @@ return {
   {
     import = "astrocommunity.editing-support.chatgpt-nvim",
     config = function()
+      local config_dir = vim.fn.stdpath "config"
       require("chatgpt").setup {
         -- this config assumes you have OPENAI_API_KEY environment variable set
         openai_params = {
           model = "gpt-4o-mini",
           frequency_penalty = 0,
           presence_penalty = 0,
-          max_tokens = 16384,
+          max_tokens = 32768,
           temperature = 0.2,
           top_p = 0.1,
           n = 1,
         },
+        actions_paths = { config_dir .. "chatgpt.json" },
       }
     end,
   },
@@ -56,6 +58,7 @@ return {
   },
   { import = "astrocommunity.debugging.persistent-breakpoints-nvim" },
   { import = "astrocommunity.debugging.telescope-dap-nvim" },
+  { import = "astrocommunity.debugging.nvim-dap-virtual-text" },
   { import = "astrocommunity.utility.lua-json5" },
   -- import/override with your plugins folder
 }
